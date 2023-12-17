@@ -21,7 +21,9 @@ export default function AboutServiceScreen({ route }) {
         <View style={styles.container}>
             <Image source={{ uri: service.image }} style={styles.image} />
             <Text style={styles.title}>{service.title}</Text>
-            <View style={styles.line} />
+            <View style={styles.line1} />
+            <View style={styles.line2} />
+            <View style={styles.line3} />
             <Text style={styles.text}>{service.text}</Text>
         </View>
     );
@@ -52,11 +54,24 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 18,
         textAlign: 'center',
+        margin: 10,
     },
-    line: {
+    line1: {
         width: '80%',
-        height: 3,
+        height: 1,
         backgroundColor: 'rgb(0, 100, 215)',
-        marginVertical: 10,
+        marginVertical: 3,
+    },
+    line2: {
+        width: '80%',
+        height: 1.5,
+        backgroundColor: 'rgb(0, 100, 215)',
+        marginVertical: 3,
+    },
+    line3: {
+        width: '80%',
+        height: 2,
+        backgroundColor: 'rgb(0, 100, 215)',
+        marginVertical: 3,
     },
 });

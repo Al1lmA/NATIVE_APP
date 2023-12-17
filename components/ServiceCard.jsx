@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function ServiceCard({ navigation, ...service }) {
     const handlePress = () => {
-        navigation.navigate('AboutService', { id: service.id });
+        navigation.navigate('Об услуге', { id: service.id });
     };
 
     return (

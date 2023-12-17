@@ -12,8 +12,8 @@ export default function App() {
         <Provider store={store}>
             <NavigationContainer>
                 <Stack.Navigator>
-                <Stack.Screen name='Services' component={ServicesScreen} />
-                <Stack.Screen name='AboutService' component={AboutServiceScreen} />
+                <Stack.Screen name='SkyBank' component={ServicesScreen} />
+                <Stack.Screen name='Об услуге' component={AboutServiceScreen} />
                 </Stack.Navigator>
             </NavigationContainer>
         </Provider>
