@@ -7,52 +7,17 @@ export default function ServiceCard({ navigation, ...service }) {
     };
 
     return (
-        // <View style={styles.card}>
-        //     <Image
-        //         style={styles.image}
-        //         source={{ uri: service.image }}
-        //         resizeMode='contain'
-        //     />
-        //     <View style={styles.container}>
-        //         <Text style={styles.brandTitle}>{service.title}</Text>
-        //         <View style={styles.row}>
-        //             <Text style={styles.text}>{service.title}</Text>
-        //             <Text style={styles.text}>{props.price} р.</Text>
-        //         </View>
-        //     </View>
-        //     <Button title='View details' onPress={handlePress} />
-        // </View>
-        <TouchableOpacity onPress={handlePress}>
-      <View style={styles.card}>
+    <TouchableOpacity onPress={handlePress}>
+    <View style={styles.card}>
         <Image source={{ uri: service.image }} style={styles.backgroundImage} />
         <View style={styles.content}>
-          <Text style={styles.title}>{service.title}</Text>
-          <Text style={styles.buttonText}>Подробнее</Text>
+        <Text style={styles.title}>{service.title}</Text>
+        <Text style={styles.buttonText}>Подробнее</Text>
         </View>
-      </View>
+    </View>
     </TouchableOpacity>
     );
 }
-
-// const styles = StyleSheet.create({
-//     card: {
-//         display: 'flex',
-//         justifyContent: 'flex-start',
-//         alignItems: 'center',
-//         flexDirection: 'column',
-//         width: 320,
-//         backgroundColor: '#303030',
-//         borderRadius: 12,
-//         padding: 24,
-//         gap: 12,
-//         margin: 8,
-//     },
-//     image: { height: 320, alignSelf: 'stretch' },
-//     container: { display: 'flex', width: '100%', margin: 8 },
-//     row: { display: 'flex', flexDirection: 'row', justifyContent: 'space-between' },
-//     brandTitle: { color: '#4287f5', fontSize: 16 },
-//     text: { color: '#f0f0f0', fontSize: 16 },
-// });
 
 const styles = StyleSheet.create({
     card: {
@@ -64,21 +29,29 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.5,
       shadowRadius: 4,
       elevation: 5,
+      backgroundColor: 'white', /* Добавляем белый фон для карточки */
     },
     backgroundImage: {
       width: '100%',
-      height: 200,
+      height: 230,
+      resizeMode: 'cover', /* Изменяем свойство resizeMode на 'cover' для изображения */
     },
     content: {
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      padding: 10,
+      position: 'absolute', /* Изменяем расположение контента на абсолютное */
+      bottom: 0, /* Размещаем контент в нижней части карточки */
+      paddingHorizontal: 10, /* Меняем padding на paddingHorizontal */
+      paddingVertical: 5, /* Добавляем вертикальный padding для контента */
+      backgroundColor: 'rgba(0, 70, 160, 0.5)',
+      width: '100%', /* Задаем ширину 100% для контента */
     },
     title: {
       color: 'white',
       fontSize: 20,
       fontWeight: 'bold',
+      marginBottom: 5, /* Добавляем отступ вниз для заголовка */
     },
     buttonText: {
       color: 'white',
+      fontSize: 14, /* Увеличиваем размер текста для кнопки */
     },
   });

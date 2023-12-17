@@ -80,7 +80,7 @@ export default function ServicesScreen({ navigation }) {
                {clicked && (
                <View>
                     <Pressable style = {styles.button} title='View details' onPress={SubmitFunc}> 
-                         <Text style = {styles.buttonText}>Поиск</Text> 
+                         <Text style = {styles.buttonText}>Найти</Text> 
                     </Pressable>
                </View>
                )}
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     // },
 
     button: {
-         backgroundColor: 'blue',
+         backgroundColor: 'rgb(0, 100, 215)',
          padding: 14,
          borderRadius: 15,
          marginLeft: 10,

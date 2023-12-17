@@ -54,8 +54,8 @@ const styles = StyleSheet.create({
     },
     line: {
         width: '80%',
-        height: 1,
-        backgroundColor: 'blue',
+        height: 3,
+        backgroundColor: 'rgb(0, 100, 215)',
         marginVertical: 10,
     },
 });
