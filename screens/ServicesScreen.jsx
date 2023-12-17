@@ -38,7 +38,7 @@ export default function ServicesScreen({ navigation }) {
 
 
     return (
-        <ScrollView>
+        <ScrollView style={styles.background}>
 
         <View style={styles.container}>
                <View
@@ -102,14 +102,14 @@ const styles = StyleSheet.create({
     //     alignItems: 'center',
     // },
 
-    // background: {
-    //      backgroundColor: '#2a2a2a'
-    // },
+    background: {
+         backgroundColor: 'rgba(255, 255, 255, 0.7)'
+    },
 
     button: {
          backgroundColor: 'rgb(0, 100, 215)',
-         padding: 14,
-         borderRadius: 15,
+         padding: 14.7,
+         borderRadius: 10,
          marginLeft: 10,
          width: 85
        },
@@ -126,27 +126,31 @@ const styles = StyleSheet.create({
          justifyContent: "flex-start",
          alignItems: "center",
          flexDirection: "row",
-         width: "90%",
+     //     width: "90%",
          
        },
        searchBar__unclicked: {
          padding: 10,
-         marginLeft: 10,
+     //     marginLeft: 10,
          flexDirection: "row",
          width: "100%",
-         backgroundColor: "#d9dbda",
-         borderRadius: 15,
+         backgroundColor: "white",
+         borderRadius: 10,
          alignItems: "center",
+         borderColor: 'rgb(0, 100, 215)',
+         borderWidth: 1
        },
        searchBar__clicked: {
          padding: 10,
          flexDirection: "row",
-         width: "75%",
-         marginLeft: 10,
-         backgroundColor: "#d9dbda",
-         borderRadius: 15,
+         width: "75.7%",
+     //     marginLeft: 10,
+         backgroundColor: "#white",
+         borderRadius: 10,
          alignItems: "center",
          justifyContent: "space-evenly",
+         borderColor: 'rgb(0, 100, 215)',
+         borderWidth: 1
        },
        input: {
          fontSize: 20,
